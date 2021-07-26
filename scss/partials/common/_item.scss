@@ -1,0 +1,39 @@
+// .item
+.item {
+	position: relative;
+	margin: 10px 0;
+
+	span {
+		color: red;
+	}
+
+	input,
+	select,
+	textarea {
+		&:hover {
+			border: 1px solid transparent;
+			box-shadow: 0 0 3px 0 $pav-green;
+			color: $pav-green;
+		}
+	}
+
+	i {
+		@include list2;
+		right: 1%;
+		top: 30px;
+		z-index: 1;
+	}
+
+	&:hover {
+		p,
+		i {
+			color: $pav-green;
+		}
+	}
+
+	&[type="radio"] {
+		&:checked + label:before {
+			border: 2px solid $pav-green;
+		}
+	}
+}

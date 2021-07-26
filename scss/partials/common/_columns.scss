@@ -1,0 +1,14 @@
+// .columns
+.columns {
+	display: flex;
+	justify-content: space-between;
+	
+	flex: {
+		direction: row;
+		wrap: wrap;
+	}
+
+	div {
+		width: 48%;
+	}
+}

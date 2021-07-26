@@ -1,0 +1,21 @@
+// .btn-block
+.btn-block {
+	margin-top: 10px;
+	text-align: center;
+}
+
+// button
+button {
+	width: 150px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	background: $pav-green;
+	font-size: 16px;
+	color: $pav-white;
+	cursor: pointer;
+
+	&:hover {
+		background: $pav-lightgreen;
+	}
+}

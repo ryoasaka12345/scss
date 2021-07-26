@@ -1,0 +1,136 @@
+// general
+html {
+	min-height: 100%;
+}
+
+body {
+	min-height: 100%;
+	@include default-list;
+}
+
+div {
+	@include default-list;
+}
+
+form {
+	@include default-list;
+
+	width: 100%;
+	padding: 20px;
+	border-radius: 6px;
+	background: $pav-white;
+	box-shadow: 0 0 8px $pav-green;
+}
+
+input {
+	@include default-list;
+	@include format-box;
+
+	width: calc(100% - 10px);
+	padding: 5px;
+
+	&:hover {
+		&::placeholder {
+			color: $pav-green;
+		}
+	}
+
+	&[type="date"] {
+		padding: 4px 5px;
+
+		&::-webkit-calendar-picker-indicator {
+			@include list2;
+		}
+	}
+
+	&[type="checkbox"] {
+		display: none;
+	}
+
+	&[type="radio"] {
+		display: none;
+		&:checked + label:after {
+			opacity: 1;
+		}
+	}
+}
+
+select {
+	@include default-list;
+	@include format-box;
+}
+
+textarea {
+	@include default-list;
+	@include format-box;
+
+	width: calc(100% - 12px);
+	padding: 5px;
+}
+
+label {
+	@include default-list;
+
+	.radio {
+		position: relative;
+		display: inline-block;
+		margin: 5px 20px 15px 0;
+		cursor: pointer;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 17px;
+			height: 17px;
+			border-radius: 50%;
+			border: 2px solid $pav-lightgray;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 6px;
+			left: 5px;
+			width: 8px;
+			height: 4px;
+			border: 3px solid $pav-green;
+			border-top: none;
+			border-right: none;
+			transform: rotate(-45deg);
+			opacity: 0;
+		}
+
+		&:hover {
+			&before {
+				border: 2px solid $pav-green;
+			}
+		}
+	}
+}
+
+h1 {
+	position: absolute;
+	margin: 0;
+	font-size: 50px;
+	color: $pav-white;
+	z-index: 2;
+	line-height: 83px;
+}
+
+legend {
+	padding: 10px;
+	color: $pav-white;
+	background-color: $pav-green;
+
+	font: {
+		size: 18px;
+		family: Robot, Arial, sans-serif;
+	}
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+	right: 1%;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+}

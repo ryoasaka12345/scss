@@ -1,0 +1,25 @@
+// .question
+.question {
+	label {
+		&:hover {
+			color: $pav-green;
+		}
+	}
+
+	span {
+		margin-left: 30px;
+	}
+
+	&:hover {
+		p,
+		i {
+			color: $pav-green;
+		}
+	}
+}
+
+.question-answer {
+	label {
+		display: block;
+	}
+}

@@ -1,0 +1,30 @@
+@import "partials/common/colors";
+@import "partials/common/mixins";
+@import "partials/common/general";
+@import "partials/common/item";
+@import "partials/common/question";
+@import "partials/common/columns";
+@import "partials/common/banner";
+@import "partials/common/button";
+
+@import "partials/testbox";
+
+@media (min-width: 568) {
+	.name-item,
+	.city-item {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.name-item input,
+	.name-item div {
+		width: calc(50% - 20px);
+	}
+	.name-item div input {
+		width: 97%;
+	}
+	.name-item div label {
+		display: block;
+		padding-bottom: 5px;
+	}
+}
